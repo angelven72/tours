@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Tours Londres | Tours Gratuitos en Español</title>
+    <style>
+        :root {
+            --primary: #1a237e;
+            --accent: #ff4081;
+            --gray: #f5f5f5;
+            --text: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Tours Section */
+        .tours {
+            padding: 5rem 2rem;
+            background: var(--gray);
+            margin-top: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .tours-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tour-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tour-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .tour-content {
+            padding: 1.5rem;
+        }
+
+        .tour-content h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .tour-details {
+            margin: 1rem 0;
+        }
+
+        .tour-details span {
+            display: block;
+            margin: 0.5rem 0;
+            color: var(--text);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #f50057;
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 5rem 2rem;
+            background: white;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Londinium Tours</div>
+        <!--<div class="nav-links">
+                <a href="#tours">Tours</a>
+                <a href="#contacto">Contacto</a> 
+            </div> -->
+        </div>
+    </nav>  
+
+    <section class="tours" id="tours">
+        <h2 class="section-title">Nuestros Tours</h2>
+        <div class="tours-grid">
+            <div class="tour-card">
+                <div class="tour-image" style="background-image: url('img/londres-esencial.jpg')"></div>
+                <div class="tour-content">
+                    <h3>Londres Esencial</h3>
+                    <p>A lo largo de las  2h visitaremos algunos de los lugares más emblemáticos y hermosos de esta hermosa ciudad, incluyendo parques reales, palacios reales, historia y puntos de interés turístico, tales como: Plaza del Parlamento, Abadía de Westminster, Big Ben, Parque de Saint James, Palacio de Bukingham, Saint James Palace, Pikcering place, Fortnum and Maison y muchos mas.</p>
+                    <div class="tour-details">
+                        <span>⏱️ Duración: 2.5 horas</span>
+                        <span>📍 Punto de encuentro: Salida estación de metro Westminster</span>
+                        <span>🗣️ Idioma: Español</span>
+                        <span>🕒 Horario: 11:00</span>
+                    </div>
+                    <a href="#" class="btn" onclick="reservar('Londres Esencial')">Reservar Gratis</a>
+                </div>
+            </div>
+
+            <div class="tour-card">
+                <div class="tour-image" style="background-image: url('img/tamesis.jpg')"></div>
+                <div class="tour-content">
+                    <h3>Camino Támesis</h3>
+                    <p>Descubre Londres desde una perspectiva única, caminando por las orillas del emblemático río Támesis. Este recorrido comienza en la majestuosa Catedral de San Pablo y te llevará por puentes históricos, vistas icónicas y rincones llenos de historia. Terminarás tu paseo en el imponente Tower Bridge, el puente más famoso de la ciudad, donde verás grandes paisajes de la ciudad</p>
+                    <div class="tour-details">
+                        <span>⏱️ Duración: 2 horas</span>
+                        <span>📍 Punto de encuentro: Salida estación de metro St. Paul's Station</span>
+                        <span>🗣️ Idioma: Español</span>
+                        <span>🕒 Horario: 11:00</span>
+                    </div>
+                    <a href="#" class="btn" onclick="reservar('Camino Támesis')">Reservar Gratis</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <input type="text" placeholder="Nombre" required>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+                <textarea rows="5" placeholder="Mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Free Tours Londres - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Función de reserva
+        function reservar(tourName) {
+            alert(`Gracias por tu interés en el tour "${tourName}". Para confirmar tu reserva, por favor envíanos un mensaje con la fecha deseada.`);
+        }
+
+        // Manejo del formulario
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Gracias por tu mensaje. Te contactaremos pronto.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
